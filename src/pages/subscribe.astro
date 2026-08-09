@@ -1,0 +1,109 @@
+---
+import BrevoSubscribeForm from "../components/BrevoSubscribeForm.astro";
+import MessagesWidget from "../components/MessagesWidget.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brewvita Coffee Co. | Spill the Beans</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script src="https://cdn.tailwindcss.com" is:inline></script>
+        <style is:global>
+            @font-face {
+                font-family: "Block Berthold Condensed";
+                src: url("/Block_Berthold_Condensed.woff2") format("woff2");
+                font-weight: 400 700;
+                font-style: normal;
+                font-display: swap;
+            }
+        </style>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://sibforms.com/forms/end-form/build/sib-styles.css"
+        />
+        <script is:inline>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            ink: "#1f2327",
+                            slate: "#2a3d52",
+                            mist: "#b8cde6",
+                            fog: "#d9e6f5",
+                            navy: "#152433",
+                            steel: "#2d4056",
+                        },
+                        fontFamily: {
+                            sans: ['"Block Berthold Condensed"', "sans-serif"],
+                            mono: ['"Alike"', "serif"],
+                        },
+                        boxShadow: {
+                            hard: "4px 4px 0px 0px #152433",
+                            "hard-hover": "2px 2px 0px 0px #152433",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style is:global>
+            .border-hard {
+                border: 3px solid #152433;
+            }
+            .input-hard {
+                border: 1.5px solid #152433;
+                border-radius: 0.5rem;
+            }
+
+            .focus-effect:focus {
+                background-color: #ffffff;
+                box-shadow: 0 8px 16px rgba(31, 35, 39, 0.1);
+                outline: 1.5px solid #152433;
+                outline-offset: 2px;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-fog text-navy font-sans antialiased min-h-screen flex flex-col"
+    >
+        <Navbar />
+
+        <main
+            class="flex-grow py-12 px-4 md:px-6 flex items-center justify-center"
+        >
+            <div class="w-full max-w-xl">
+                <div
+                    class="bg-white border-2 border-navy rounded-[2rem] shadow-lg overflow-hidden"
+                >
+                    <div
+                        class="bg-navy p-8 md:p-10 rounded-t-[2rem] relative overflow-hidden"
+                    >
+                        <h1
+                            class="text-3xl md:text-5xl font-bold uppercase text-fog relative z-10"
+                        >
+                            Newsletter
+                        </h1>
+                        <p
+                            class="font-mono text-mist font-bold tracking-wide relative z-10 text-sm md:text-base mt-2"
+                        >
+                            Join the Brewvita community
+                        </p>
+                    </div>
+                    <div class="p-8 md:p-10">
+                        <BrevoSubscribeForm />
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <Footer />
+        <MessagesWidget />
+    </body>
+</html>
