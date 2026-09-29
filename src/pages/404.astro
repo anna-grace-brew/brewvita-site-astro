@@ -1,0 +1,82 @@
+---
+import MessagesWidget from "../components/MessagesWidget.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brewvita Coffee Co. | Menu</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script src="https://cdn.tailwindcss.com" is:inline></script>
+    <style is:global>
+      @font-face {
+        font-family: "Block Berthold Condensed";
+        src: url("/Block_Berthold_Condensed.woff2") format("woff2");
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#1f2327",
+              slate: "#2a3d52",
+              mist: "#b8cde6",
+              fog: "#d9e6f5",
+              navy: "#152433",
+              steel: "#2d4056",
+            },
+            fontFamily: {
+              sans: ['"Block Berthold Condensed"', "sans-serif"],
+              mono: ['"Alike"', "serif"],
+            },
+            boxShadow: {
+              hard: "4px 4px 0px 0px #152433",
+            },
+          },
+        },
+      };
+    </script>
+    <style is:global>
+      .border-hard {
+        border: 3px solid #152433;
+      }
+      .dotted-leader {
+        background-image: linear-gradient(
+          to right,
+          #152433 33%,
+          rgba(255, 255, 255, 0) 0%
+        );
+        background-position: bottom;
+        background-size: 6px 1px;
+        background-repeat: repeat-x;
+      }
+      /* Hide scrollbar for clean look */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-fog text-navy font-sans antialiased">
+    <section class="py-16 px-4 md:px-6 max-w-4xl mx-auto">
+      <h1>404 Error Code</h1>
+      <a href="/">Go Back Home!</a>
+      <Footer />
+    </section>
+  </body>
+</html>

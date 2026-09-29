@@ -3,180 +3,189 @@ import MessagesWidget from "../components/MessagesWidget.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
+
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Brewvita Coffee Co. | Contact</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <script src="https://cdn.tailwindcss.com" is:inline></script>
-        <style is:global>
-            @font-face {
-                font-family: "Block Berthold Condensed";
-                src: url("/Block_Berthold_Condensed.woff2") format("woff2");
-                font-weight: 400 700;
-                font-style: normal;
-                font-display: swap;
-            }
-        </style>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
-            rel="stylesheet"
-        />
-        <script is:inline>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            ink: "#1f2327",
-                            slate: "#2a3d52",
-                            mist: "#b8cde6",
-                            fog: "#d9e6f5",
-                            navy: "#152433",
-                            steel: "#2d4056",
-                        },
-                        fontFamily: {
-                            sans: ['"Block Berthold Condensed"', "sans-serif"],
-                            mono: ['"Alike"', "serif"],
-                        },
-                        boxShadow: {
-                            hard: "4px 4px 0px 0px #152433",
-                        },
-                    },
-                },
-            };
-        </script>
-        <style is:global>
-            .border-hard {
-                border: 3px solid #152433;
-            }
-            details > summary {
-                list-style: none;
-            }
-            details > summary::-webkit-details-marker {
-                display: none;
-            }
-        </style>
-    </head>
-    <body class="bg-fog text-navy font-sans antialiased">
-        <Navbar />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brewvita Coffee Co. | Contact</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script src="https://cdn.tailwindcss.com" is:inline></script>
+    <style is:global>
+      @font-face {
+        font-family: "Block Berthold Condensed";
+        src: url("/Block_Berthold_Condensed.woff2") format("woff2");
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#1f2327",
+              slate: "#2a3d52",
+              mist: "#b8cde6",
+              fog: "#d9e6f5",
+              navy: "#152433",
+              steel: "#2d4056",
+            },
+            fontFamily: {
+              sans: ['"Block Berthold Condensed"', "sans-serif"],
+              mono: ['"Alike"', "serif"],
+            },
+            boxShadow: {
+              hard: "4px 4px 0px 0px #152433",
+            },
+          },
+        },
+      };
+    </script>
+    <style is:global>
+      .border-hard {
+        border: 3px solid #152433;
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-fog text-navy font-sans antialiased">
+    <Navbar />
 
-        <!-- Intro -->
-        <section class="py-10 px-6 bg-white border-b-4 border-navy">
-            <div class="max-w-5xl mx-auto text-center">
-                <h1 class="text-6xl md:text-8xl font-bold uppercase">
-                    Reach Out
-                </h1>
+    <!-- Intro -->
+    <section class="py-10 px-6 bg-white border-b-4 border-navy">
+      <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-6xl md:text-8xl font-bold uppercase">Reach Out</h1>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <!-- Left: Contact -->
+      <div
+        class="lg:col-span-7 flex pt-12 md:pt-16 pb-12 md:pb-16 px-6 justify-center border-b-4 lg:border-b-0 lg:border-r-4 border-navy bg-fog"
+      >
+        <div class="w-full max-w-lg">
+          <h2 class="text-4xl font-bold uppercase mb-10">Contact</h2>
+
+          <div class="space-y-4">
+            <!-- Email -->
+            <div class="border-hard bg-white shadow-hard p-6">
+              <p class="font-mono text-xs uppercase text-slate mb-1">Email</p>
+              <a
+                href="mailto:students@brewvita.com"
+                class="font-mono text-base font-bold hover:underline"
+              >
+                students@brewvita.com
+              </a>
             </div>
-        </section>
+            <!-- Instagram -->
+            <div class="border-hard bg-white shadow-hard p-6">
+              <p class="font-mono text-xs uppercase text-slate mb-1">
+                Instagram
+              </p>
+              <a
+                href="https://instagram.com/brewvita"
+                target="_blank"
+                rel="noopener"
+                class="font-mono text-base font-bold hover:underline"
+              >
+                @brewvita
+              </a>
+            </div>
+            <!-- LinkedIn -->
+            <div class="border-hard bg-white shadow-hard p-6">
+              <p class="font-mono text-xs uppercase text-slate mb-1">
+                LinkedIn
+              </p>
+              <a
+                href="https://linkedin.com/company/brewvitacoffeeco"
+                target="_blank"
+                rel="noopener"
+                class="font-mono text-base font-bold hover:underline"
+              >
+                Brewvita Coffee Co.
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12">
-            <!-- Left: Contact -->
-            <div
-                class="lg:col-span-7 flex pt-12 md:pt-16 pb-12 md:pb-16 px-6 justify-center border-b-4 lg:border-b-0 lg:border-r-4 border-navy bg-fog"
+      <!-- Right: FAQs -->
+      <div class="lg:col-span-5 p-6 md:p-12 lg:p-16 bg-white">
+        <h2 class="text-4xl font-bold uppercase mb-10 text-slate">FAQs</h2>
+
+        <div class="space-y-6">
+          <!-- FAQ 1 -->
+          <details class="group cursor-pointer">
+            <summary
+              class="flex items-center justify-between border-b-2 border-navy pb-4"
             >
-                <div class="w-full max-w-lg">
-                    <h2 class="text-4xl font-bold uppercase mb-10">
-                        Contact
-                    </h2>
-
-                    <div class="space-y-4">
-                        <!-- Email -->
-                        <div class="border-hard bg-white shadow-hard p-6">
-                            <p class="font-mono text-xs uppercase text-slate mb-1">Email</p>
-                            <a href="mailto:students@brewvita.com" class="font-mono text-base font-bold hover:underline">
-                                students@brewvita.com
-                            </a>
-                        </div>
-                        <!-- Instagram -->
-                        <div class="border-hard bg-white shadow-hard p-6">
-                            <p class="font-mono text-xs uppercase text-slate mb-1">Instagram</p>
-                            <a href="https://instagram.com/brewvita" target="_blank" rel="noopener" class="font-mono text-base font-bold hover:underline">
-                                @brewvita
-                            </a>
-                        </div>
-                        <!-- LinkedIn -->
-                        <div class="border-hard bg-white shadow-hard p-6">
-                            <p class="font-mono text-xs uppercase text-slate mb-1">LinkedIn</p>
-                            <a href="https://linkedin.com/company/brewvitacoffeeco" target="_blank" rel="noopener" class="font-mono text-base font-bold hover:underline">
-                                Brewvita Coffee Co.
-                            </a>
-                        </div>
-                    </div>
-                </div>
+              <span class="font-bold uppercase pr-4"
+                >What forms of payment are accepted?</span
+              >
+              <span class="text-xl group-open:rotate-45 transition-transform"
+                >+</span
+              >
+            </summary>
+            <div class="pt-4 pb-2 font-mono text-sm text-slate">
+              Brewvita accepts card, mobile pay, and Flames Cash. Since we are
+              not a unit through Sodexo, we cannot accept dining dollars or
+              swipes. We hope to see you soon!
             </div>
-
-            <!-- Right: FAQs -->
-            <div class="lg:col-span-5 p-6 md:p-12 lg:p-16 bg-white">
-                <h2 class="text-4xl font-bold uppercase mb-10 text-slate">
-                    FAQs
-                </h2>
-
-                <div class="space-y-6">
-                    <!-- FAQ 1 -->
-                    <details class="group cursor-pointer">
-                        <summary
-                            class="flex items-center justify-between border-b-2 border-navy pb-4"
-                        >
-                            <span class="font-bold uppercase pr-4"
-                                >What payment is accepted?</span
-                            >
-                            <span
-                                class="text-xl group-open:rotate-45 transition-transform"
-                                >+</span
-                            >
-                        </summary>
-                        <div class="pt-4 pb-2 font-mono text-sm text-slate">
-                            Brewvita accepts card, mobile pay, and Flames Cash.
-                            Since we are not a unit through Sodexo, we cannot
-                            accept dining dollars or swipes. We hope to see you
-                            soon!
-                        </div>
-                    </details>
-                    <!-- FAQ 2 -->
-                    <details class="group cursor-pointer">
-                        <summary
-                            class="flex items-center justify-between border-b-2 border-navy pb-4"
-                        >
-                            <span class="font-bold uppercase pr-4"
-                                >What if I don’t like coffee?</span
-                            >
-                            <span
-                                class="text-xl group-open:rotate-45 transition-transform"
-                                >+</span
-                            >
-                        </summary>
-                        <div class="pt-4 pb-2 font-mono text-sm text-slate">
-                            We offer teas, energy drinks, and seasonal options.
-                        </div>
-                    </details>
-                </div>
-
-                <!-- Get Involved Mini -->
-                <div class="mt-20 border-hard p-8 bg-mist">
-                    <h3 class="font-bold uppercase mb-4">Get Involved</h3>
-                    <p class="font-mono text-sm mb-6">
-                        We are a social enterprise dedicated to supporting
-                        students. Follow us on social media.
-                    </p>
-                    <div class="flex flex-wrap gap-3">
-                        <a
-                            href="/application"
-                            class="text-xs uppercase font-bold border-2 border-navy rounded-full px-3 py-2 bg-white hover:bg-navy hover:text-white transition-colors"
-                            >Application</a
-                        >
-                        <a
-                            href="https://groupme.com/join_group/109529495/AAfO8L3b"
-                            class="text-xs uppercase font-bold border-2 border-navy rounded-full px-3 py-2 bg-white hover:bg-navy hover:text-white transition-colors"
-                            >Join Enactus</a
-                        >
-                    </div>
-                </div>
+          </details>
+          <!-- FAQ 2 -->
+          <details class="group cursor-pointer">
+            <summary
+              class="flex items-center justify-between border-b-2 border-navy pb-4"
+            >
+              <span class="font-bold uppercase pr-4"
+                >What if I don’t like coffee?</span
+              >
+              <span class="text-xl group-open:rotate-45 transition-transform"
+                >+</span
+              >
+            </summary>
+            <div class="pt-4 pb-2 font-mono text-sm text-slate">
+              We offer teas, energy drinks, and seasonal options.
             </div>
+          </details>
         </div>
 
-        <Footer />
-        <MessagesWidget />
-    </body>
+        <!-- Get Involved Mini -->
+        <div class="mt-20 border-hard p-8 bg-mist">
+          <h3 class="font-bold uppercase mb-4">Get Involved</h3>
+          <p class="font-mono text-sm mb-6">
+            We are a social enterprise dedicated to supporting students. Follow
+            us on social media.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/application"
+              class="text-xs uppercase font-bold border-2 border-navy rounded-full px-3 py-2 bg-white hover:bg-navy hover:text-white transition-colors"
+              >Application</a
+            >
+            <a
+              href="https://groupme.com/join_group/109529495/AAfO8L3b"
+              class="text-xs uppercase font-bold border-2 border-navy rounded-full px-3 py-2 bg-white hover:bg-navy hover:text-white transition-colors"
+              >Join Enactus</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Footer />
+    <MessagesWidget />
+  </body>
 </html>
