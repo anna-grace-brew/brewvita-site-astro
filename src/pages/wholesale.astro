@@ -1,0 +1,141 @@
+---
+import MessagesWidget from "../components/MessagesWidget.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brewvita Coffee Co. | Wholesale</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <script src="https://cdn.tailwindcss.com" is:inline></script>
+    <style is:global>
+      @font-face {
+        font-family: "Block Berthold Condensed";
+        src: url("/Block_Berthold_Condensed.woff2") format("woff2");
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#1f2327",
+              slate: "#2a3d52",
+              mist: "#b8cde6",
+              fog: "#d9e6f5",
+              navy: "#152433",
+              steel: "#2d4056",
+            },
+            fontFamily: {
+              sans: ['"Block Berthold Condensed"', "sans-serif"],
+              mono: ['"Alike"', "serif"],
+            },
+            boxShadow: {
+              hard: "4px 4px 0px 0px #152433",
+              "hard-hover": "1px 1px 0px 0px #152433",
+            },
+            animation: {
+              marquee: "marquee 25s linear infinite",
+            },
+            keyframes: {
+              marquee: {
+                "0%": { transform: "translateX(0%)" },
+                "100%": { transform: "translateX(-100%)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style is:global>
+      .border-hard {
+        border: 3px solid #152433;
+      }
+      .text-stroke {
+        -webkit-text-stroke: 1px #152433;
+        color: transparent;
+      }
+      .testimonial-grid {
+        perspective: 1800px;
+      }
+      @media (max-width: 767px) {
+        .testimonial-card {
+          min-height: 25rem;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-fog text-navy font-sans antialiased selection:bg-slate selection:text-white"
+  >
+    <Navbar />
+    <section class="py-24 px-6 bg-fog relative overflow-hidden">
+      <h2
+        class="text-6xl md:text-8xl font-bold uppercase mb-8 text-navy tracking-tight"
+      >
+        Wholesale
+      </h2>
+      <p>this is... wholesale</p>
+    </section>
+    <!-- Get Involved / Footer Hero -->
+    <section class="py-24 px-6 bg-fog relative overflow-hidden">
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2
+          class="text-6xl md:text-8xl font-bold uppercase mb-8 text-navy tracking-tight"
+        >
+          Get Involved
+        </h2>
+        <p class="font-mono text-lg max-w-2xl mx-auto mb-12">
+          We want to connect with you! Check out the opportunities for you to
+          get involved with Brewvita and join our community.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+          <a
+            href="/application"
+            class="px-6 py-3 border-hard rounded-full bg-white hover:bg-navy hover:text-white transition-colors font-bold uppercase text-sm shadow-hard hover:shadow-hard-hover hover:translate-x-[3px] hover:translate-y-[3px]"
+            >Application</a
+          >
+          <a
+            href="/suggestion"
+            class="px-6 py-3 border-hard rounded-full bg-white hover:bg-navy hover:text-white transition-colors font-bold uppercase text-sm shadow-hard hover:shadow-hard-hover hover:translate-x-[3px] hover:translate-y-[3px]"
+            >Drink Suggestion</a
+          >
+          <a
+            href="https://groupme.com/join_group/109529495/AAfO8L3b"
+            class="px-6 py-3 border-hard rounded-full bg-white hover:bg-navy hover:text-white transition-colors font-bold uppercase text-sm shadow-hard hover:shadow-hard-hover hover:translate-x-[3px] hover:translate-y-[3px]"
+            >Join Enactus</a
+          >
+          <a
+            href="https://www.instagram.com/brewvita/?hl=en"
+            class="px-6 py-3 border-hard rounded-full bg-white hover:bg-navy hover:text-white transition-colors font-bold uppercase text-sm shadow-hard hover:shadow-hard-hover hover:translate-x-[3px] hover:translate-y-[3px]"
+            >Instagram</a
+          >
+          <a
+            href="/subscribe"
+            class="px-6 py-3 border-hard rounded-full bg-white hover:bg-navy hover:text-white transition-colors font-bold uppercase text-sm shadow-hard hover:shadow-hard-hover hover:translate-x-[3px] hover:translate-y-[3px]"
+            >Subscribe to Spill the Beans!</a
+          >
+        </div>
+
+        <div class="text-sm uppercase tracking-widest text-slate">
+          <p>Follow us on social media</p>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+    <MessagesWidget />
+  </body>
+</html>
